@@ -9,7 +9,7 @@
         <meta name="description" content="Oliver and Monique wedding website">
 
         <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Montserrat:Montserrat:400,400i,600" rel="stylesheet">
 
         <!-- Custom CSS -->
         <link href="css/style.css" rel="stylesheet">
