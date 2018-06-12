@@ -43,12 +43,16 @@ function going(id) {
 	ajaxRequest("GET", url, true, "", goingCallback);
 }
 function goingCallback(response) {
-	alert(response);
+	var id = "block-" + response;
+	var bigBlock = document.getElementById(id);
+	bigBlock.getElementsByTagName('p')[1].innerHTML = "<span class='green'>Going</span>";
 }
 function unable(id) {
 	var url = "sendInfo.php?text=unable," + id;
-	ajaxRequest("GET", url, true, "", goingCallback);
+	ajaxRequest("GET", url, true, "", unableCallback);
 }
 function unableCallback(response) {
-	alert(response);
+	var id = "block-" + response;
+	var bigBlock = document.getElementById(id);
+	bigBlock.getElementsByTagName('p')[1].innerHTML = "<span class='red'>Unable to attend</span>";
 }
