@@ -3,6 +3,9 @@
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
 }
+html {
+    overflow-x: hidden;
+}
 body {
     background-color: rgb(235, 235, 235);
 }
@@ -28,11 +31,15 @@ body {
 .search-container {
     padding: 20px 0 20px 0;
     background: white;
-    text-align: center;
 }
 label {
-    font-weight: 600;
-    
+    font-weight: 600;   
+}
+.search-label-container {
+    width: 87.5vw;
+    margin: 5px auto 0 auto;
+    max-width: 950px;
+    text-align: left;
 }
 .search {
     display: block;
@@ -86,12 +93,18 @@ label {
     border-radius: 3px;
     color: white;
     cursor: pointer;
-    width: 70px;
-    text-align: left;
+    width: 60px;
+    text-align: center;
 }
 .can {
     background: rgb(0, 202, 216);
 }
+.can:hover {
+    background: rgb(0, 151, 161);
+}
 .cant {
     background: rgb(63, 63, 63);
+}
+.cant:hover {
+    background: rgb(36, 36, 36);
 }

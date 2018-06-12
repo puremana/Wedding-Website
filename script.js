@@ -32,6 +32,23 @@ function writeUserInfo(response) {
     document.getElementById("block-container").innerHTML = response;
 }
 
+//On search key input
 function search(input) {
 
+}
+
+//On click functions
+function going(id) {
+	var url = "sendInfo.php?text=going," + id;
+	ajaxRequest("GET", url, true, "", goingCallback);
+}
+function goingCallback(response) {
+	alert(response);
+}
+function unable(id) {
+	var url = "sendInfo.php?text=unable," + id;
+	ajaxRequest("GET", url, true, "", goingCallback);
+}
+function unableCallback(response) {
+	alert(response);
 }

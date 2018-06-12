@@ -9,6 +9,7 @@
     $html = "";
     //Read from database
     while($row = mysqli_fetch_assoc($result)) {
+        $id = $row['user_id'];
         $name = $row['user_name'];
         $status = $row['user_status'];
         $statusText = "";
@@ -16,21 +17,21 @@
         if ($status == null) {
             $statusText = "<span class='grey'>Awaiting confrmation</span>";
         }
-        else if ($status == "can go") {
+        else if ($status == "going") {
             $statusText = "<span class='green'>Going</span>";
         }
         else {
-            $statusText = "<span class='red'>Can't Go</span>";
+            $statusText = "<span class='red'>Unable to attend</span>";
         }
 
-        $html = $html . "<div class='block'>
+        $html = $html . "<div class='block' id='block-" . $id . "'>
             <div class='block-upper'>
                 <div class='block-name'>
                     <p>" . $name . "</p>
                     <p>" . $statusText . " </p>
                 </div>
                 <div class='block-can'>
-                    <div class='button can'>Can Go</div>
+                    <div class='button can' onclick='going(" . $id . ")'>Going</div>
                 </div>
             </div>
             <div class='block-lower'>
@@ -38,7 +39,7 @@
                     
                 </div>
                 <div class='block-cant'>
-                    <div class='button cant'>Can't Go</div>
+                    <div class='button cant' onclick='unable(" . $id . ")'>Unable</div>
                 </div>
             </div>
         </div>";

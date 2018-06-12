@@ -18,7 +18,7 @@
         <script src="script.js"></script>
 
         <title>RSVP - Oliver and Monique</title>
-
+    
     </head>
     <body onload="getUserInfo()">
         <div class="header">
@@ -27,7 +27,9 @@
         </div>
         <div class="content">
             <div class="search-container">
-                <label for="search">Enter Full Name</label>
+                <div class="search-label-container">
+                    <label for="search">Enter Full Name</label>
+                </div>
                 <input class="search" name="search" id="search" placeholder="Enter Full Name" onkeyup="search(this)"></input>
             </div>
             <div class="block-container" id="block-container">
