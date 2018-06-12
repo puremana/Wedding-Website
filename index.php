@@ -33,48 +33,7 @@
                 <input class="search" name="search" id="search" placeholder="Enter Full Name" onkeyup="search(this)"></input>
             </div>
             <div class="block-container" id="block-container">
-                <div class="block">
-                    <div class="block-name">
-                        Nelson Shaw
-                    </div>
-                    <div class="block-can">
-                        <button class="button can">Can Go</button>
-                    </div>
-                    <div class="block-status">
-                        Awaiting confirmation
-                    </div>
-                    <div class="block-cant">
-                    <button class="button cant">Can't Go</button>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="block-name">
-                        Nelson Shaw
-                    </div>
-                    <div class="block-can">
-                        <button class="button can">Can Go</button>
-                    </div>
-                    <div class="block-status">
-                        Awaiting confirmation
-                    </div>
-                    <div class="block-cant">
-                    <button class="button cant">Can't Go</button>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="block-name">
-                        Nelson Shaw
-                    </div>
-                    <div class="block-can">
-                        <button class="button can">Can Go</button>
-                    </div>
-                    <div class="block-status">
-                        Awaiting confirmation
-                    </div>
-                    <div class="block-cant">
-                    <button class="button cant">Can't Go</button>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </body>

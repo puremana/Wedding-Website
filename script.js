@@ -34,7 +34,31 @@ function writeUserInfo(response) {
 
 //On search key input
 function search(input) {
+	var key = input.value.toLowerCase();
+	var blocks = document.getElementsByClassName("block");
 
+	//If the search only contains whitespace
+	if (!key.replace(/\s/g, '').length) {
+		for (var i = 0; i < blocks.length; i++) {
+			blocks[i].setAttribute("class", "block hide");
+		}
+		return;
+	}
+
+	//Search the blocks for the input key
+	for (var i = 0; i < blocks.length; i++) {
+		var text = blocks[i].getElementsByClassName('name')[0].innerHTML;
+		
+		//If the input is found in the name
+		if (text.toLowerCase().includes(key)) {
+			//Display it
+			blocks[i].classList.remove("hide");
+		}
+		else {
+			//Else, hide it
+			blocks[i].setAttribute("class", "block hide");
+		}
+	}
 }
 
 //On click functions

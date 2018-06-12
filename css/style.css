@@ -108,3 +108,6 @@ label {
 .cant:hover {
     background: rgb(36, 36, 36);
 }
+.hide {
+    display: none;
+}

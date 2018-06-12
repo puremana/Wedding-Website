@@ -24,10 +24,10 @@
             $statusText = "<span class='red'>Unable to attend</span>";
         }
 
-        $html = $html . "<div class='block' id='block-" . $id . "'>
+        $html = $html . "<div class='block hide' id='block-" . $id . "'>
             <div class='block-upper'>
                 <div class='block-name'>
-                    <p>" . $name . "</p>
+                    <p class='name'>" . $name . "</p>
                     <p>" . $statusText . " </p>
                 </div>
                 <div class='block-can'>
