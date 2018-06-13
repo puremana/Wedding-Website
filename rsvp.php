@@ -17,13 +17,12 @@
         <!-- Javascript -->
         <script src="script.js"></script>
 
-        <title>RSVP - Oliver and Monique</title>
+        <title>RSVP - Olly and Monique</title>
     
     </head>
-    <body onload="getUserInfo()">
+    <body onload="getUserInfo()" class="page-rsvp">
         <div class="header">
-            <h2>Oliver &#38; Monique</h2>
-            <h1>Wedding</h1>
+            <h2>RSVP</h2>
         </div>
         <div class="content">
             <div class="search-container">

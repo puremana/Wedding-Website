@@ -1,3 +1,4 @@
+/* Global */
 * {
     margin: 0px;
     padding: 0px;
@@ -9,14 +10,28 @@ html {
 body {
     background-color: rgb(235, 235, 235);
 }
-.header h2 {
-    padding-top: 200px;
-    font-size: 3em;
+
+/* Home Page */
+.background {
+    height: 90vh;
+    width: 100vw;
+    background: url('img/background.jpg');
+    background-size: cover;
 }
-.header h1 {
+.page-index h2 {
+    padding-top: 20vh;
+    font-size: 7.5vw;
+}
+.page-index h1 {
+    font-size: 10vw;
+}
+
+/* RSVP Page */
+.page-rsvp .header h2 {
+    padding-top: 120px;
     font-size: 5em;
 }
-.header h2, .header h1 {
+h2, h1 {
     font-family: 'Great Vibes', cursive;
     text-align: center;
     color: white;
@@ -26,7 +41,7 @@ body {
 .header {
     background: url('img/background.jpg');
     background-size: cover;
-    height: 500px;
+    height: 300px;
 }
 .search-container {
     padding: 20px 0 20px 0;
