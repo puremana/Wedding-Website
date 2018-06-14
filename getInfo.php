@@ -12,16 +12,26 @@
         $id = $row['user_id'];
         $name = $row['user_name'];
         $status = $row['user_status'];
+        $bus = $row['user_bus'];
+
         $statusText = "";
+        $busText = "";
 
         if ($status == null) {
-            $statusText = "<span class='grey'>Awaiting confrmation</span>";
+            $statusText = "<span class='status grey'>Awaiting confrmation</span>";
         }
         else if ($status == "going") {
-            $statusText = "<span class='green'>Going</span>";
+            $statusText = "<span class='status green'>Going</span>";
         }
         else {
-            $statusText = "<span class='red'>Unable to attend</span>";
+            $statusText = "<span class='status red'>Unable to attend</span>";
+        }
+
+        if ($bus == "true") {
+            $busText = "<input type='checkbox' class='checkbox-bus' checked name='bus' value='" . $id . "' onclick='busCheck(this)'>Attending bus";
+        } 
+        else {
+            $busText = "<input type='checkbox' class='checkbox-bus' name='bus' value='" . $id . "' onclick='busCheck(this)'>Attending bus";
         }
 
         $html = $html . "<div class='block hide' id='block-" . $id . "'>
@@ -36,7 +46,7 @@
             </div>
             <div class='block-lower'>
                 <div class='block-status'>
-                    
+                    " . $busText . "
                 </div>
                 <div class='block-cant'>
                     <div class='button cant' onclick='unable(" . $id . ")'>Unable</div>

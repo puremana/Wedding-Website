@@ -76,7 +76,22 @@ function unable(id) {
 	ajaxRequest("GET", url, true, "", unableCallback);
 }
 function unableCallback(response) {
+	alert(response);
 	var id = "block-" + response;
 	var bigBlock = document.getElementById(id);
 	bigBlock.getElementsByTagName('p')[1].innerHTML = "<span class='red'>Unable to attend</span>";
+}
+function busCheck(checkbox) {
+	var id = checkbox.value;
+	if (checkbox.checked) {
+		var url = "sendInfo.php?text=busYes," + id;
+		ajaxRequest("GET", url, true, "", busCheckCallback);
+	}
+	else {
+		var url = "sendInfo.php?text=busNo," + id;
+		ajaxRequest("GET", url, true, "", busCheckCallback);
+	}
+}
+function busCheckCallback() {
+	alert("You have been registration for the bus has changed.");
 }
