@@ -10,16 +10,43 @@ html {
 body {
     background-color: rgb(235, 235, 235);
 }
+.nav {
+    height: 60px;
+    z-index: 1000;
+    position: fixed;
+    background-color: white;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 5px;
+    max-width: 960px;
+    width: 90vw;
+    margin: 20px auto 0 auto;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+}
+.nav li {
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px 0 10px 0;
+    z-index: 1000;
+    color: rgb(0, 0, 0);
+    border-right: 1px solid rgb(233, 233, 233);
+}
+.last {
+    border-right: none !important;
+}
 
 /* Home Page */
 .background {
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     background: url('img/background.jpg');
     background-size: cover;
 }
 .page-index h2 {
-    padding-top: 20vh;
+    padding-top: 30vh;
     font-size: 7.5vw;
 }
 .page-index h1 {
