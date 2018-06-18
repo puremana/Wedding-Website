@@ -34,6 +34,9 @@ body {
     color: rgb(0, 0, 0);
     border-right: 1px solid rgb(233, 233, 233);
 }
+.nav li:hover {
+    color: rgb(116, 116, 116);
+}
 .last {
     border-right: none !important;
 }
@@ -53,9 +56,39 @@ body {
     font-size: 10vw;
 }
 
+/* Event Info Page */
+.page-event .nav {
+    margin-top: -80px;
+}
+.page-event {
+    background: url('img/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.event-info {
+    max-width: 960px;
+    width: 90vw;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    margin: 100px auto 50px auto;
+    height: 900px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.event-info .h2-container {
+    border-bottom: 1px solid rgb(233, 233, 233);
+    max-width: 800px;
+    width: 75vw;
+    margin: 0 auto 0 auto;
+}
+.event-info h2 {
+    padding: 30px 0 20px 0;
+    font-size: 3em;
+    color: rgb(0, 0, 0);
+    text-shadow: none;
+}
 /* RSVP Page */
 .page-rsvp .header h2 {
-    padding-top: 120px;
+    padding-top: 145px;
     font-size: 5em;
 }
 h2, h1 {
