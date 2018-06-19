@@ -18,23 +18,33 @@
     
     </head>
     <body class="page-admin">
-        <div class="login-form">
-            <h4>Password</h4>
-            <form action="login.php" method="post">
-                    <input id="userPassword" name="userPassword" type="password" placeholder="Enter Password here">
-                    <button id="userLogin" type="submit">Login</button>
-            </form>
-            
-        </div>
+        <?php
+            session_start();
+            if (isset($_SESSION['user_id'])) {
+                echo '
+                <div class="header-container">
+                    <h2>Admin Dashboard</h2>
+                </div>
+                <div class="admin-content">
+                    <h3>Overall Info</h3>
         
-        <!-- <div class="header-container">
-            <h2>Admin Dashboard</h2>
-        </div>
-        <div class="admin-content">
-            <h3>Overall Info</h3>
+        
+                    <h3>All Info</h3>
+                </div>';
+            }
+            else {
+                echo '
+                <div class="login-form">
+                    <h4>Password</h4>
+                    <form action="login.php" method="post">
+                            <input id="userPassword" name="userPassword" type="password" placeholder="Enter Password here">
+                            <button id="userLogin" name="submit" type="submit">Login</button>
+                    </form>
+                </div>';
+            }
+        ?>
 
+        
 
-            <h3>All Info</h3>
-        </div> -->
     </body>
 </html>
