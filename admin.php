@@ -83,6 +83,29 @@
                     <h2>Admin Dashboard</h2>
                 </div>
                 <div class="admin-content">
+                <h3>Manual Input Person</h3>
+                <form class="input-form" action="inputPerson.php" method="post">
+                    <div class="form-input">
+                        <span class="bold">Full Name</span>
+                        <input type="text" placeholder="Full Name" name="name">
+                    </div>
+                    <div class="form-input">
+                        <span class="bold">Set Attendance</span>
+                        <select name="attendance">
+                            <option value="awaiting">Awaiting</option>
+                            <option value="unable">Unable</option>
+                            <option value="going">Going</option>
+                        </select>
+                    </div>
+                    <div class="form-input">
+                        <span class="bold">Bus</span>
+                        <select name="bus">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                    <button type="submit" name="submitUser">Submit</button>
+                </form>
                     <h3>Overall Info</h3>
                 ' . '
                 <div class="chart-container">

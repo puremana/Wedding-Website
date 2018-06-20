@@ -13,7 +13,6 @@ if (isset($_POST['submit'])) {
     }
     else {
         //no need $hash = password_hash($pwd, PASSWORD_DEFAULT);
-        echo $hash;
         $sql = "SELECT * FROM `log` WHERE `user_pass` = '$pwd'";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
