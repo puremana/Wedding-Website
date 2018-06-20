@@ -3,6 +3,9 @@
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
 }
+.page-admin {
+    text-align: center;
+}
 h2 {
     font-size: 3em;
     text-align: center;
@@ -25,4 +28,33 @@ h3 {
 }
 #userLogin {
     padding: 5px 10px;
+}
+.general-table {
+    width: 80vw;
+    border: 1px solid black;
+    text-align: center;
+    margin: 20px auto 40px auto;
+    border-radius: 5px;
+}
+.general-table td, .general-table th {
+    border: 1px solid black;
+    padding: 10px 0 10px 0;
+    border-radius: 5px;
+}
+.chart-container {
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 20px auto 20px auto;
+    padding: 20px;
+    display: inline-block;
+}
+.red {
+    color: rgb(173, 0, 0);
+}
+.green {
+    color: rgb(0, 175, 0);
+}
+.yellow {
+    color: rgb(255, 191, 15);
 }
