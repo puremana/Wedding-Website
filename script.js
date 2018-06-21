@@ -76,7 +76,6 @@ function unable(id) {
 	ajaxRequest("GET", url, true, "", unableCallback);
 }
 function unableCallback(response) {
-	alert(response);
 	var id = "block-" + response;
 	var bigBlock = document.getElementById(id);
 	bigBlock.getElementsByTagName('p')[1].innerHTML = "<span class='red'>Unable to attend</span>";
@@ -93,7 +92,7 @@ function busCheck(checkbox) {
 	}
 }
 function busCheckCallback() {
-	alert("You have been registration for the bus has changed.");
+	alert("Your registration for the bus has changed.");
 }
 function deleteUser(id, name) {
 	var txt;

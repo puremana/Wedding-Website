@@ -3,6 +3,6 @@
 
     $id = $_GET['text'];
     
-    $sql = "DELETE FROM `users` WHERE `user_id` = '$id'";
-    $result = mysqli_query($conn, $sql);
+    $sql = "DELETE FROM `users` WHERE `user_id` = '$id';";
+    mysqli_query($conn, $sql);
 ?>

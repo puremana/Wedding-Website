@@ -27,6 +27,8 @@
             session_start();
             if (isset($_SESSION['user_id'])) {
                 include 'includes/db.php';
+
+                //General Table
                 $sql = "SELECT * FROM users";
                 $result = mysqli_query($conn, $sql);
                 $generalTable = "<table class='general-table'>
@@ -83,6 +85,29 @@
                     </tr>"; 
                 }
                 $generalTable = $generalTable . "</table>";
+
+                //Log Table
+                $sql = "SELECT * FROM logmessages ORDER BY log_id DESC;";
+                $result = mysqli_query($conn, $sql);
+                $logTable = "<table class='general-table'>
+                <tr>
+                    <th>IP Address</th> 
+                    <th>Time</th>
+                    <th>Message</th>
+                </tr>";
+
+                while($row = mysqli_fetch_assoc($result)) {
+                    $ip = $row['log_ip'];
+                    $date = $row['log_date'];
+                    $message = $row['log_message'];
+
+                    $logTable = $logTable . "<tr>
+                        <td>" . $ip . "</td>
+                        <td>" . $date . "</td>
+                        <td>" . $message . "</td>
+                    </tr>"; 
+                }
+                $logTable = $logTable . "</table>";
 
                 echo '        
                 <div class="header-container">
@@ -180,6 +205,8 @@
         
                     <h3>All Info</h3>
                     ' . $generalTable . '
+                    <h3>Log Information</h3>
+                    ' . $logTable . '
                 </div>';
             }
             else {
