@@ -16,6 +16,9 @@
         <!-- Custom CSS -->
         <link href="css/admin-style.css" rel="stylesheet">
 
+        <!-- Javascript -->
+        <script src="script.js"></script>
+
         <title>Admin - Olly and Monique</title>
     
     </head>
@@ -69,11 +72,14 @@
                         $busNo++;
                     }
 
+                    $button = "<button class='button-delete' onclick='deleteUser(" . $id . ", \"" . $name . "\")'>Delete</button>";
+
                     $generalTable = $generalTable . "<tr>
                         <td>" . $id . "</td>
                         <td>" . $name . "</td>
                         <td>" . $statusText . "</td>
                         <td>" . $busText . "</td>
+                        <td>" . $button . "</td>
                     </tr>"; 
                 }
                 $generalTable = $generalTable . "</table>";

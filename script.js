@@ -95,3 +95,15 @@ function busCheck(checkbox) {
 function busCheckCallback() {
 	alert("You have been registration for the bus has changed.");
 }
+function deleteUser(id, name) {
+	var txt;
+	var message = "Are you sure you want to delete " + name + "?";
+	var r = confirm(message);
+	if (r == true) {
+		var url = "deletePerson.php?text=" + id;
+		ajaxRequest("GET", url, true, "", deleteCallback);
+	}
+}
+function deleteCallback() {
+	window.location.replace("http://localhost/wedding-website/admin.php");
+}
