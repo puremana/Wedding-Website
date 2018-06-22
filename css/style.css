@@ -199,3 +199,9 @@ label {
     color: rgb(0, 0, 0);
     text-shadow: 2px 2px #bbbbbb;
 }
+
+@media screen and (max-width: 870px) {
+    .mobile-display {
+        display: none;
+    }
+}
