@@ -23,10 +23,10 @@
     <body onload="getUserInfo()" class="page-rsvp">
         <div class="nav">
             <ul>
-                <a href="index"><li>Home</li></a>
-                <a href="event-info"><li>Event Info</li></a>
-                <a href="rsvp"><li>RSVP</li></a>
-                <a href="gallery"><li class="last">Gallery</li></a>
+                <a href="/"><li>Home</li></a>
+                <a href="/event-info"><li>Event Info</li></a>
+                <a href="/rsvp"><li>RSVP</li></a>
+                <a href="/gallery"><li class="last">Gallery</li></a>
             </ul>
         </div>
         <div class="header">

@@ -104,5 +104,5 @@ function deleteUser(id, name) {
 	}
 }
 function deleteCallback() {
-	window.location.replace("http://localhost/wedding-website/admin.php");
+	window.location.replace("https://ollyandmon.com/admin");
 }

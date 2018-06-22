@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     $pwd = mysqli_real_escape_string($conn, $_POST['userPassword']);
 
     if (empty($pwd)) {
-        header("Location: admin.php");
+        header("Location: admin");
         exit();
     }
     else {
@@ -17,12 +17,12 @@ if (isset($_POST['submit'])) {
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
         if ($resultCheck < 1) {
-            header("Location: admin.php");
+            header("Location: admin");
             exit();
         }
         else {
             $_SESSION["user_id"] = "use_row_id_if_real";
-            header("Location: admin.php");
+            header("Location: admin");
             exit;
         }
     }
