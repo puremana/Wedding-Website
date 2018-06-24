@@ -172,7 +172,7 @@ label {
     border-radius: 3px;
     color: white;
     cursor: pointer;
-    width: 60px;
+    width: 85px;
     text-align: center;
 }
 .can {
@@ -203,5 +203,9 @@ label {
 @media screen and (max-width: 870px) {
     .mobile-display {
         display: none;
+    }
+    .nav li {
+        width: 23%;
+        font-size: 0.9em;
     }
 }

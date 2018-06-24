@@ -18,10 +18,10 @@
         $busText = "";
 
         if ($status == null) {
-            $statusText = "<span class='status grey'>Awaiting confrmation</span>";
+            $statusText = "<span class='status grey'>Awaiting confirmation</span>";
         }
         else if ($status == "going") {
-            $statusText = "<span class='status green'>Going</span>";
+            $statusText = "<span class='status green'>Attending</span>";
         }
         else {
             $statusText = "<span class='status red'>Unable to attend</span>";
@@ -41,7 +41,7 @@
                     <p>" . $statusText . " </p>
                 </div>
                 <div class='block-can'>
-                    <div class='button can' onclick='going(" . $id . ")'>Going</div>
+                    <div class='button can' onclick='going(" . $id . ")'>Attending</div>
                 </div>
             </div>
             <div class='block-lower'>

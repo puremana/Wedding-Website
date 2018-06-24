@@ -70,6 +70,7 @@ function goingCallback(response) {
 	var id = "block-" + response;
 	var bigBlock = document.getElementById(id);
 	bigBlock.getElementsByTagName('p')[1].innerHTML = "<span class='green'>Going</span>";
+	alert("Your wedding attendance has been confirmed.");
 }
 function unable(id) {
 	var url = "sendInfo.php?text=unable," + id;
@@ -79,6 +80,7 @@ function unableCallback(response) {
 	var id = "block-" + response;
 	var bigBlock = document.getElementById(id);
 	bigBlock.getElementsByTagName('p')[1].innerHTML = "<span class='red'>Unable to attend</span>";
+	alert("Your wedding attendance has been set to unable.");
 }
 function busCheck(checkbox) {
 	var id = checkbox.value;
@@ -104,5 +106,5 @@ function deleteUser(id, name) {
 	}
 }
 function deleteCallback() {
-	window.location.replace("https://ollyandmon.com/admin");
+	window.location.replace("https://ollyandmon.co.nz/admin");
 }
