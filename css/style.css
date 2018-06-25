@@ -288,6 +288,10 @@ label {
     padding: 5px;
     float: left;
 }
+.block-status {
+    width: 50%;
+    min-width: 150px;
+}
 .checkbox-bus {
     margin-top: 10px;
     margin-right: 5px;

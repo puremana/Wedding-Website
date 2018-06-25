@@ -39,8 +39,8 @@ function search(input) {
 	var key = input.value.toLowerCase();
 	var blocks = document.getElementsByClassName("block");
 
-	//If the search only contains whitespace
-	if (!key.replace(/\s/g, '').length) {
+	//If the search only contains whitespace or less than 3 characters
+	if ((!key.replace(/\s/g, '').length) || (key.length < 3)) {
 		for (var i = 0; i < blocks.length; i++) {
 			blocks[i].setAttribute("class", "block hide");
 		}

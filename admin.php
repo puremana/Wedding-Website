@@ -108,7 +108,7 @@
                 $generalTable = $generalTable . "</table>";
 
                 //Log Table
-                $sql = "SELECT * FROM logmessages ORDER BY log_id DESC;";
+                $sql = "SELECT * FROM logMessages ORDER BY log_id DESC;";
                 $result = mysqli_query($conn, $sql);
                 $logTable = "<table class='general-table'>
                 <tr>
