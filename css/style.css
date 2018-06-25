@@ -290,7 +290,7 @@ label {
 }
 .block-status {
     width: 50%;
-    min-width: 150px;
+    min-width: 100px;
 }
 .checkbox-bus {
     margin-top: 10px;
@@ -349,5 +349,26 @@ label {
     .nav li {
         width: 23%;
         font-size: 0.9em;
+    }
+    .page-index h2 {
+        padding-top: 30vh;
+        font-size: 4em;
+    }
+    .page-index h1 {
+        font-size: 6em;
+    }
+}
+@media screen and (max-width: 400px) {
+    .mobile-display {
+        display: none;
+    }
+    .nav li {
+        font-size: 0.8em;
+    }
+    body {
+        font-size: 0.8em;
+    }
+    .button {
+        width: 60px;
     }
 }
