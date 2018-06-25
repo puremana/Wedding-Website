@@ -29,7 +29,9 @@ function getUserInfo() {
 
 //Write user information in html
 function writeUserInfo(response) {
-    document.getElementById("block-container").innerHTML = response;
+	document.getElementById("block-container").innerHTML = response;
+	document.getElementById("loader").setAttribute("class", "sk-fading-circle hide");
+	document.getElementById("search").disabled = false;
 }
 
 //On search key input
@@ -69,7 +71,7 @@ function going(id) {
 function goingCallback(response) {
 	var id = "block-" + response;
 	var bigBlock = document.getElementById(id);
-	bigBlock.getElementsByTagName('p')[1].innerHTML = "<span class='green'>Going</span>";
+	bigBlock.getElementsByTagName('p')[1].innerHTML = "<span class='green'>Attending</span>";
 	alert("Your wedding attendance has been confirmed.");
 }
 function unable(id) {
@@ -80,7 +82,7 @@ function unableCallback(response) {
 	var id = "block-" + response;
 	var bigBlock = document.getElementById(id);
 	bigBlock.getElementsByTagName('p')[1].innerHTML = "<span class='red'>Unable to attend</span>";
-	alert("Your wedding attendance has been set to unable.");
+	alert("Your wedding attendance has been set to unable to attend.");
 }
 function busCheck(checkbox) {
 	var id = checkbox.value;

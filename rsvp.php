@@ -43,6 +43,20 @@
     
     </head>
     <body onload="getUserInfo()" class="page-rsvp">
+        <div class="sk-fading-circle" id="loader">
+            <div class="sk-circle1 sk-circle"></div>
+            <div class="sk-circle2 sk-circle"></div>
+            <div class="sk-circle3 sk-circle"></div>
+            <div class="sk-circle4 sk-circle"></div>
+            <div class="sk-circle5 sk-circle"></div>
+            <div class="sk-circle6 sk-circle"></div>
+            <div class="sk-circle7 sk-circle"></div>
+            <div class="sk-circle8 sk-circle"></div>
+            <div class="sk-circle9 sk-circle"></div>
+            <div class="sk-circle10 sk-circle"></div>
+            <div class="sk-circle11 sk-circle"></div>
+            <div class="sk-circle12 sk-circle"></div>
+        </div>
         <div class="nav">
             <ul>
                 <a href="/"><li>Home</li></a>
@@ -59,7 +73,7 @@
                 <div class="search-label-container">
                     <label for="search">Enter Full Name</label>
                 </div>
-                <input class="search" name="search" id="search" placeholder="Enter Full Name" onkeyup="search(this)"></input>
+                <input class="search" name="search" id="search" placeholder="Enter Full Name" onkeyup="search(this)" disabled></input>
             </div>
             <div class="block-container" id="block-container">
                 

@@ -28,10 +28,10 @@
         }
 
         if ($bus == "true") {
-            $busText = "<input type='checkbox' class='checkbox-bus' checked name='bus' value='" . $id . "' onclick='busCheck(this)'>Attending bus";
+            $busText = "<input type='checkbox' class='checkbox-bus' checked name='bus' value='" . $id . "' onclick='busCheck(this)'>Require seat on bus";
         } 
         else {
-            $busText = "<input type='checkbox' class='checkbox-bus' name='bus' value='" . $id . "' onclick='busCheck(this)'>Attending bus";
+            $busText = "<input type='checkbox' class='checkbox-bus' name='bus' value='" . $id . "' onclick='busCheck(this)'>Require seat on bus";
         }
 
         $html = $html . "<div class='block hide' id='block-" . $id . "'>
@@ -49,7 +49,7 @@
                     " . $busText . "
                 </div>
                 <div class='block-cant'>
-                    <div class='button cant' onclick='unable(" . $id . ")'>Unable</div>
+                    <div class='button cant' onclick='unable(" . $id . ")'>Can't go</div>
                 </div>
             </div>
         </div>";
