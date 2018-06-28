@@ -36,6 +36,9 @@
         <!-- Custom CSS -->
         <link href="css/style.css" rel="stylesheet">
 
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="css/swiper.min.css">
+
         <title>Gallery - Olly and Monique</title>
     
     </head>
@@ -48,8 +51,41 @@
                 <a href="/gallery"><li class="last">Gallery</li></a>
             </ul>
         </div>
-        <div class="coming-soon">
-            <h1>Gallery Coming Soon!</h1>
+        <!-- Swiper -->
+        <div class="gallery-content">
+            <div class="h2-container gallery-h2">
+                <h2>Gallery</h2>
+            </div>
+            <div class="swiper-container">    
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/gallery/1.jpg"></div>
+                    <div class="swiper-slide"><img src="img/gallery/2.jpg"></div>
+                    <div class="swiper-slide"><img src="img/gallery/3.jpg"></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </div>
+        
+    
+      <!-- Swiper JS -->
+      <script src="swiper.min.js"></script>
+    
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper('.swiper-container', {
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      </script>
     </body>
 </html>
