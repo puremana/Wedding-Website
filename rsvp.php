@@ -61,7 +61,7 @@
             <ul>
                 <a href="/wedding-info"><li><span class="mobile-display">Wedding </span>Info</li></a>
                 <a href="/rsvp"><li>RSVP</li></a>
-                <a href="/accommodation"><li>Accommodation</li></a>
+                <a href="/accommodation"><li class="accom-nav">Accommodation</li></a>
                 <a href="/gallery"><li class="last">Gallery</li></a>
             </ul>
         </div>
