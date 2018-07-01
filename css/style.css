@@ -415,6 +415,7 @@ label {
 }
 .swiper-container img {
     max-width: 80%;
+    max-height: 500px;
 }
 
 @media screen and (max-width: 870px) {
