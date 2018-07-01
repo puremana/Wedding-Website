@@ -52,7 +52,41 @@
             <div class="h2-container">
                 <h2>Wedding Info</h2>
             </div>
-            
+            <div class="accom-content">
+                <div class="left-text-container">
+                    <p class="bold">The wedding venue is Kuranui Lodge. </p>
+                    <p><span class="italic">1420 SH 5, Ngatira 3485, New Zealand</span></p>
+                    <p>Kuranui New Zealand Hunting, privately owned by Mort and Mel Moon, is one of the finest exclusive private game hunting estates in New Zealand. Bordered by over 250,000 acres of wild free range hunting land, Kuranui traverses the rolling foothills of the Mamaku Range in the North Island and is just 2 hours drive from Auckland International Airport.</p>
+                    <p>With majestic subtropical forest, giant tree ferns and wild Manuka slopes that open onto clearings and lush river flats, Kuranui has the perfect environment for fair chase 'spot and stalk' hunting. Prolific feed here produces some of the world's most spectacular Red Stags characterised by their darkened antlers and polished tips.</p>
+                    <p class="bold">Timetable</p>
+                    <p>The wedding ceremony will start at 3:00pm. We recommend leaving Rotorua by 2:00pm at the latest. The party will end at 12:00am.</p>
+                    <p class="bold">Post Wedding Lunch</p>
+                    <p>The day following the wedding we hope you can join us for a post wedding BBQ. The lunch will be held at 68 Sophia Street, Rotorua from 12:00 - 2:00pm.</p>               
+                </div>
+                <div class="right-maps-container">
+                    <img src="img/lodge.jpg" alt="Kuranui Hunting Lodge" class="holdens-image"> 
+                    <div id="map"></div>
+                    <script>
+                        function initMap() {
+                            var myLatLng = {lat: -38.0035671, lng: 175.91297510000004};
+                    
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 14,
+                            center: myLatLng
+                            });
+                    
+                            var marker = new google.maps.Marker({
+                            position: myLatLng,
+                            map: map,
+                            title: 'Kuranui Hunting Lodge'
+                            });
+                        }
+                    </script>
+                    <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcY-dBeTiGQjLnkisqkyLz_h_qlCIZ7vQ&callback=initMap">
+                    </script>
+                </div>
+            </div>
 
         </div>
     </body>

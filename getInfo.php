@@ -12,10 +12,10 @@
         $id = $row['user_id'];
         $name = $row['user_name'];
         $status = $row['user_status'];
-        $bus = $row['user_bus'];
+        //$bus = $row['user_bus'];
 
         $statusText = "";
-        $busText = "";
+        // $busText = "";
 
         if ($status == null) {
             $statusText = "<span class='status grey'>Awaiting confirmation</span>";
@@ -27,12 +27,12 @@
             $statusText = "<span class='status red'>Unable to attend</span>";
         }
 
-        if ($bus == "true") {
-            $busText = "<input type='checkbox' class='checkbox-bus' checked name='bus' value='" . $id . "' onclick='busCheck(this)'>Require seat on bus";
-        } 
-        else {
-            $busText = "<input type='checkbox' class='checkbox-bus' name='bus' value='" . $id . "' onclick='busCheck(this)'>Require seat on bus";
-        }
+        // if ($bus == "true") {
+        //     $busText = "<input type='checkbox' class='checkbox-bus' checked name='bus' value='" . $id . "' onclick='busCheck(this)'>Require seat on bus";
+        // } 
+        // else {
+        //     $busText = "<input type='checkbox' class='checkbox-bus' name='bus' value='" . $id . "' onclick='busCheck(this)'>Require seat on bus";
+        // } " . $busText . "
 
         $html = $html . "<div class='block hide' id='block-" . $id . "'>
             <div class='block-upper'>
@@ -46,7 +46,7 @@
             </div>
             <div class='block-lower'>
                 <div class='block-status'>
-                    " . $busText . "
+                    
                 </div>
                 <div class='block-cant'>
                     <div class='button cant' onclick='unable(" . $id . ")'>Can't go</div>
