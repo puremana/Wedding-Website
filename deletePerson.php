@@ -1,8 +1,17 @@
 <?php
     include 'includes/db.php';
 
-    $id = $_GET['text'];
+    $id = mysqli_real_escape_string($conn, $_GET['text']);
     
-    $sql = "DELETE FROM `users` WHERE `user_id` = '$id';";
-    mysqli_query($conn, $sql);
+    $stmt = $conn->prepare("DELETE FROM `users` WHERE `user_id` = ?");
+    $bind = $stmt->bind_param('i', $id);
+
+    if ($bind === false) {
+        exit();
+    }
+
+    $stmt->execute();
+
+    $stmt->close();
+    $conn->close();
 ?>
