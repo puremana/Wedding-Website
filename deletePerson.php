@@ -13,5 +13,8 @@
     $stmt->execute();
 
     $stmt->close();
+
     $mysqli->close();
+
+    $conn->close();
 ?>
