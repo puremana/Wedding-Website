@@ -417,6 +417,11 @@ label {
     max-width: 80%;
     max-height: 500px;
 }
+.slider-text {
+    margin-top: 5px;
+    position: absolute;
+    align-self: start;
+}
 
 @media screen and (max-width: 870px) {
     .mobile-display {
